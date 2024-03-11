@@ -54,8 +54,8 @@ train_dataset = Dataset.from_pandas(df)
 #### DATASET FORMAT
 ```
 
-def format_instruction(text: str, score: str):
-	return f"""<s>[INST]{text.strip()} YOUR PROMPT.[/INST] {score}</s>""".strip()
+def format_instruction(input_text: str, output_text: str):
+	return f"""<s>[INST]{input_text.strip()} YOUR PROMPT.[/INST] {output_text}</s>""".strip()
 
 def generate_instruction_dataset(data_point):
     return {
